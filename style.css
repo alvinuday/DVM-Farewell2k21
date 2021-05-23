@@ -18,15 +18,17 @@
 }
 
 @keyframes colorChange {
-    0% {
-        background-color: #e8cf30;
-    }
-    60% {
-        background-color: #c94545;
-    }
-    100% {
-        background-color: #e8cf30;
-    }
+  0% {
+    background-color: #e8cf30;
+  }
+
+  60% {
+    background-color: #c94545;
+  }
+
+  100% {
+    background-color: #e8cf30;
+  }
 }
 
 #desktopbg {
@@ -144,7 +146,7 @@
   justify-content: center;
   display: flex;
   z-index: 3;
-  box-shadow: 0px 10px 10px -3px rgb(0,0,0,0.25);
+  box-shadow: 0px 10px 10px -3px rgb(0, 0, 0, 0.25);
 }
 
 .anjali {
@@ -152,7 +154,7 @@
 }
 
 .nayan {
-  background-image: url(./assets/images/);
+  background-image: url(./assets/images/nayanBack.jpeg);
 }
 
 .raghav {
@@ -160,11 +162,11 @@
 }
 
 .manish {
-  background-image: url(./assets/images/);
+  background-image: url(./assets/images/manishApp.jpeg);
 }
 
 .hardik {
-  background-image: url(./assets/images/);
+  background-image: url(./assets/images/hardikVid.jpeg);
 }
 
 .abhishek {
@@ -176,7 +178,7 @@
 }
 
 .nishant {
-  background-image: url(./assets/images/);
+  background-image: url(./assets/images/nishantApp.jpeg);
 }
 
 
@@ -247,23 +249,25 @@ p {
 }
 
 .underline {
-    width: 100%;
-    position: absolute;
-    height: 6px;
-    animation: linkAfter 0.5s 1s ease both, colorChange2 10s infinite;
-    transition: background-color 0.1s ease both;
+  width: 100%;
+  position: absolute;
+  height: 6px;
+  animation: linkAfter 0.5s 1s ease both, colorChange2 10s infinite;
+  transition: background-color 0.1s ease both;
 }
 
 @keyframes colorChange2 {
-    0% {
-        background-color: rgb(206, 7, 27);
-    }
-    60% {
-        background-color: #e8cf30;
-    }
-    100% {
-        background-color: rgb(206, 7, 27);
-    }
+  0% {
+    background-color: rgb(206, 7, 27);
+  }
+
+  60% {
+    background-color: #e8cf30;
+  }
+
+  100% {
+    background-color: rgb(206, 7, 27);
+  }
 }
 
 @keyframes linkAfter {
@@ -411,6 +415,7 @@ p {
 
   .headline h1 {
     font-size: 2.25rem;
+    margin-bottom: 2.5vw;
   }
 
   /* <-----profile details-----> */
