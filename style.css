@@ -6,14 +6,27 @@
 }
 
 .wrapper {
-  display: flex;
-  background-color: #ffb100;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-  flex-direction: row;
-  justify-content: space-between;
+    display: flex;
+    animation: colorChange 45s infinite;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
+@keyframes colorChange {
+    0% {
+        background-color: #e8cf30;
+    }
+    60% {
+        background-color: #c94545;
+    }
+    100% {
+        background-color: #e8cf30;
+    }
+}
+
 #desktopbg {
   position: absolute;
   z-index: 1;
@@ -173,13 +186,23 @@ p {
 }
 
 .underline {
-  width: 100%;
-  position: absolute;
-  height: 6px;
-  background-color: red;
-  animation: linkAfter 0.5s 1s ease both;
-  transition: background-color 0.1s ease both;
-  animation-delay: s;
+    width: 100%;
+    position: absolute;
+    height: 6px;
+    animation: linkAfter 0.5s 1s ease both, colorChange2 45s infinite;
+    transition: background-color 0.1s ease both;
+}
+
+@keyframes colorChange2 {
+    0% {
+        background-color: rgb(206, 7, 27);
+    }
+    60% {
+        background-color: #e8cf30;
+    }
+    100% {
+        background-color: rgb(206, 7, 27);
+    }
 }
 
 @keyframes linkAfter {
@@ -246,74 +269,92 @@ p {
 
 /* <-------MOBILE RESPONSE -------> */
 @media screen and (max-width: 768px) and (min-width:0px) {
-
-#desktopbg{
-    display:none;
-}
-#mobilebg {
-    display:flex;
-    width: 100vw;
-    transform: scale(1.5);
-    position: absolute;
-    
-}
-.wrapper {
-    flex-direction: column-reverse;
-    height:100vh;
-    width: 100vw;
-    overflow: hidden;
-    background-image: url('assets/images/zoomed\ in\ diffsize.png');
-    background-repeat: no-repeat;
-    background-size:100vw;
-    background-position: center top;
-}
-.divright {
-    padding-top: 35vw;
-}
-
-.screen {
-    transform: translate(0%, 0%) perspective(0px) rotateX(0deg)
-    rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
-    /* background-color: red; */
-    width:90%;
-    height:100%;
-    padding:0;
-    margin:0;
-}
-.card1 {
-    height: 40vw;
-    padding: 0;
-}
-.carousel-item{
-    /* background-color: blue; */
-    height: 30vh;
-    padding:0;
-    margin: 0;
-}
-
-
-/* div-left */
-.details {
-    /* background-color: red; */
-    margin-top: 30vh;
-}
-.headline h1 { 
-    font-size: 45px;
-}
-/* <-----profile details-----> */
-.profile-name {
-    font-size: 6vw;
-}
-p {
-    font-size:3vw;
-}
-.profile-image {
-    height: 70px;
-    background-image: url(/assets/images/profile-img.jpeg);
-    width:70px;
-}
-
-
-
-
+    #desktopbg {
+        display: none;
+    }
+    #mobilebg {
+        display: flex;
+        width: 100vw;
+        transform: scale(1.5);
+        position: absolute;
+    }
+    .wrapper {
+        flex-direction: column-reverse;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        background-color: #ffb100;
+        background-image: url('assets/images/zoomed\ in\ diffsize.png');
+        background-repeat: no-repeat;
+        background-size: 100vw;
+        background-position: center top;
+        animation: none;
+    }
+    .divright {
+        padding-top: 35vw;
+    }
+    .screen {
+        transform: translate(0%, 0%) perspective(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
+        width: 90%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+    }
+    .card1 {
+        height: 40vw;
+        padding: 0;
+    }
+    .carousel-item {
+        height: 30vh;
+        padding: 0;
+        margin: 0;
+    }
+    /* div-left */
+    .details {
+        margin-top: 30vh;
+    }
+    /* <-----profile details-----> */
+    .profile-name {
+        font-size: 6vw;
+    }
+    p {
+        font-size: 3vw;
+    }
+    .profile-image {
+        height: 70px;
+        background-image: url(/assets/images/profile-img.jpeg);
+        width: 70px;
+    }
+    .headline {
+        position: fixed;
+        top: 70vh;
+        text-align: center;
+    }
+    .headline h1 {
+        animation: byBottom 1s 7s ease both;
+        font-size: 45px;
+        width: 80vw;
+    }
+    br {
+        display: none;
+    }
+    .date {
+        position: fixed;
+        top: 73vh;
+    }
+    .date span {
+        text-align: center;
+        width: 80vw;
+        padding: 0;
+        font-size: 25px;
+    }
+    #day {
+        animation: bySideLeft 1s 7s ease both;
+    }
+    .carousel-indicators,
+    .carousel-control-next,
+    .carousel-control-prev,
+    .underline {
+        display: none;
+    }
 }
