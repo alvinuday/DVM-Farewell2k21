@@ -136,7 +136,8 @@
 .hardik,
 .abhishek,
 .divyam,
-.nishant {
+.nishant,
+.hemanth {
   width: 16vw;
   height: 14vw;
   border-radius: 50%;
@@ -179,6 +180,10 @@
 
 .nishant {
   background-image: url(./assets/images/nishantApp.jpeg);
+}
+
+.hemanth{
+  background-image: url(./assets/images/hemantBack.jpeg);
 }
 
 
@@ -458,7 +463,8 @@ p {
   .hardik,
   .abhishek,
   .divyam,
-  .nishant {
+  .nishant,
+  .hemanth {
     height: 30vw;
     width: 30vw;
   }
