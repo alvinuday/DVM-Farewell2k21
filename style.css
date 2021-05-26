@@ -181,6 +181,10 @@
   background-image: url(./assets/images/nishantApp.jpeg);
 }
 
+.hemanth{
+  background-image: url(./assets/images/hemantBack.jpeg);
+}
+
 
 
 .profile-info {
@@ -447,7 +451,8 @@ p {
   .hardik,
   .abhishek,
   .divyam,
-  .nishant {
+  .nishant,
+  .hemanth {
     height: 30vw;
     width: 30vw;
   }
