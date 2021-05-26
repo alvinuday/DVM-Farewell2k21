@@ -19,6 +19,7 @@
 
 
   <div class="wrapper">
+    <img id="easteregg" src="assets/images/sanchitBack.jpeg" alt="easter-egg">
     <img id="desktopbg" src="assets/images/wobg(shadow).png" alt="">
     <!-- <img id="mobilebg" src="assets/images/SCREEN-front-withbg.png" alt=""> -->
     <div class="divleft">
@@ -180,5 +181,60 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+<script>
+  var str = "";
+  var touchcount = 0;
+  var easteregg = document.getElementById('easteregg');
+    window.addEventListener("keydown", function (e) {
+      
+        str = str + e.key;
+        if (str.length>4){
+          str = str.slice(1);
+        }
+        if(str=="simp"){
+          console.log("you're a simp");
+          easteregg.style.display = 'block';
+          setTimeout(() => {
+            easteregg.style.transform = 'scale(1)';
+          }, 100);
+          setTimeout(() => {
+            easteregg.style.transform = 'scale(0)';
+              setTimeout(() => {
+              easteregg.style.display = 'none';
+               }, 1200);
+          }, 1000); 
+        }
+
+        
+        console.log(str);
+      }
+     
+    );
+
+     window.addEventListener("touchstart", function(e){
+        touchcount++;
+        setTimeout(() => {
+          if(touchcount!=3) {
+            touchcount = 0;
+          }
+        }, 400); 
+        if (touchcount==3){
+          console.log("trigger simp");
+          console.log("you're a simp");
+          easteregg.style.display = 'block';
+          setTimeout(() => {
+            easteregg.style.transform = 'scale(1)';
+          }, 100);
+          setTimeout(() => {
+            easteregg.style.transform = 'scale(0)';
+              setTimeout(() => {
+              easteregg.style.display = 'none';
+               }, 1200);
+          }, 1000); 
+
+        }      
+        
+      })
+</script>
 
 </html>

@@ -335,6 +335,17 @@ p {
     opacity: 1;
   }
 }
+/* <-----easter----egg-----> */
+#easteregg {
+  display: none;
+  position: absolute;
+  left: 40vw;
+  z-index: 10;
+  height: 50%;
+  top: 25vh;
+  transition: all 1s;
+  transform: scale(0);
+}
 
 
 
@@ -456,9 +467,14 @@ p {
     height: 30vw;
     width: 30vw;
   }
+  #easteregg {
+    left: 0vw;
+    margin:50px;
+  }
 
 
 
 
 
 }
+
